@@ -1,6 +1,7 @@
 package com.co.qvision.stepdefinitions;
 
 
+import com.co.qvision.tasks.Login;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -30,6 +31,7 @@ public class LoginStepDefinition {
 
     @When("^he user enter credentials$")
     public void heUserEnterCredentials() {
+        OnStage.theActorInTheSpotlight().attemptsTo(Login.enterCredentials());
 
     }
 
