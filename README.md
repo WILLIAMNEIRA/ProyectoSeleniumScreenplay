@@ -1,2 +1,2 @@
 # ProyectoSeleniumScreenplay
-Proyecto Automatización  Selenium Screenplay
+Proyecto Automatización  Selenium con patron de diseño Screenplay
