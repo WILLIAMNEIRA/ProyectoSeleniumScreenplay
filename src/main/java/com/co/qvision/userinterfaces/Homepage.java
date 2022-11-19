@@ -1,2 +1,4 @@
-package com.co.qvision.userinterfaces;public class Homepage {
+package com.co.qvision.userinterfaces;
+
+public class Homepage {
 }
