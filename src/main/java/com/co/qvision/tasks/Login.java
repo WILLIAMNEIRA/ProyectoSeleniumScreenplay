@@ -11,9 +11,10 @@ public class Login implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Enter.theValue("standard_user").into(Homepage.TXT_USERNAME));
-        actor.attemptsTo(Enter.theValue("secret_sauce").into(Homepage.TXT_PASSWORD));
-        actor.attemptsTo(Click.on(Homepage.BTN_LOGIN));
+        actor.attemptsTo
+                (Enter.theValue("standard_user").into(Homepage.TXT_USERNAME),
+                Enter.theValue("secret_sauce").into(Homepage.TXT_PASSWORD),
+                Click.on(Homepage.BTN_LOGIN));
     }
     public static Login enterCredentials(){
         return Tasks.instrumented(Login.class);
