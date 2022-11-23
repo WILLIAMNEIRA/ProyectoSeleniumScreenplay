@@ -21,10 +21,10 @@ public class Login implements Task {
                 (Enter.theValue(credential.getUsername()).into(HomePage.TXT_USERNAME),
                         Enter.theValue(credential.getPassword()).into(HomePage.TXT_PASSWORD),
                         Click.on(HomePage.BTN_LOGIN));
+
     }
 
     public static Login enterCredentials(Credential credential) {
-
         return Tasks.instrumented(Login.class, credential);
     }
 }

@@ -9,8 +9,10 @@ public class ValidateProduct implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
+
         return Text.of(ProductPage.LBL_PRODUCTS).viewedBy(actor).asString();
     }
+
     public static ValidateProduct compare(){
         return  new ValidateProduct();
     }

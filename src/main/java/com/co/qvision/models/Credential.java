@@ -4,6 +4,11 @@ public class Credential {
     public String username;
     public String password;
 
+    public Credential(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public String getUsername() {
         return username;
     }
@@ -20,8 +25,5 @@ public class Credential {
         this.password = password;
     }
 
-    public Credential(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
+
 }

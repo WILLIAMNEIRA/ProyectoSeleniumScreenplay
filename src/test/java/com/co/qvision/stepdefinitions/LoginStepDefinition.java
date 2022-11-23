@@ -16,8 +16,6 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
-
-import javax.swing.*;
 import java.util.List;
 
 public class LoginStepDefinition {
