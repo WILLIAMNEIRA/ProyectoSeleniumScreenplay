@@ -1,6 +1,6 @@
 package com.co.qvision.tasks;
 
-import com.co.qvision.userinterfaces.Homepage;
+import com.co.qvision.userinterfaces.HomePage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -12,9 +12,9 @@ public class Login implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo
-                (Enter.theValue("standard_user").into(Homepage.TXT_USERNAME),
-                Enter.theValue("secret_sauce").into(Homepage.TXT_PASSWORD),
-                Click.on(Homepage.BTN_LOGIN));
+                (Enter.theValue("standard_user").into(HomePage.TXT_USERNAME),
+                Enter.theValue("secret_sauce").into(HomePage.TXT_PASSWORD),
+                Click.on(HomePage.BTN_LOGIN));
     }
     public static Login enterCredentials(){
         return Tasks.instrumented(Login.class);
