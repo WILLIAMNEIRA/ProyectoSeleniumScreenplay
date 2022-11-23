@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
-public class ValidateProduct implements Question {
+public class ValidateProduct implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {

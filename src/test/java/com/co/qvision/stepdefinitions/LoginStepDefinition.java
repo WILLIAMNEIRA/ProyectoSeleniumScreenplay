@@ -1,6 +1,7 @@
 package com.co.qvision.stepdefinitions;
 
 
+import com.co.qvision.models.Credential;
 import com.co.qvision.questions.ValidateProduct;
 import com.co.qvision.tasks.Login;
 import cucumber.api.java.Before;
@@ -15,6 +16,9 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
+
+import javax.swing.*;
+import java.util.List;
 
 public class LoginStepDefinition {
 
@@ -33,8 +37,10 @@ public class LoginStepDefinition {
     }
 
     @When("^he user enter credentials$")
-    public void heUserEnterCredentials() {
-        OnStage.theActorInTheSpotlight().attemptsTo(Login.enterCredentials());
+    public void heUserEnterCredentials(List<Credential> credentialList) {
+        Credential credential;
+        credential= credentialList.get(0);
+        OnStage.theActorInTheSpotlight().attemptsTo(Login.enterCredentials(credential));
 
     }
 
